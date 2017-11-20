@@ -1,0 +1,13 @@
+{
+  "name": "arillo/logslackwriter",
+  "description": "Publish SilverStripe errors and warnings into a Slack channel via webhook.",
+  "type": "silverstripe-module",
+	"license": "MIT",
+	"keywords": ["silverstripe", "log", "logging", "error", "reporting", "slack"],
+  "require" : {
+	"silverstripe/framework": "~3.1"
+	},
+	"extra" : {
+		"installer-name": "logslackwriter"
+	}
+}
