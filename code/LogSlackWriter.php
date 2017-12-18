@@ -36,9 +36,14 @@ class SS_LogSlackWriter extends Zend_Log_Writer_Abstract {
 				$channel = SS_SLACK_LOG_CHANNEL;
 			}
 
+			$username = 'silverstripe';
+			if (defined('SS_SLACK_LOG_USERNAME')) {
+				$username = SS_SLACK_LOG_USERNAME;
+			}
+
 			$json = json_encode(array(
 				'channel'    => $channel,
-				'username'   => 'silverstripe',
+				'username'   => $username,
 				'text'       => $formattedData,
                 'icon_emoji' => ':warning:',
                 'unfurl_links' => false,
